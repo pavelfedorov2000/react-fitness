@@ -1,0 +1,25 @@
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+    font-style: normal;
+    font-family: $ff;
+    font-size: calc(#{$fz} / 10 * 1rem);
+    line-height: 2.2rem;
+    font-weight: 400;
+    color: $color-default;
+
+    @media (max-width: 767px) {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+    &._lock {
+        overflow-y: hidden;
+    }
+}
+
+button,
+input,
+textarea {
+    font-family: $ff;
+}

@@ -1,0 +1,12 @@
+.filter-selects {
+    display: grid;
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--offset-m);
+    }
+
+    @media (min-width: 1025px) {
+        gap: var(--offset-xls);
+    }
+}

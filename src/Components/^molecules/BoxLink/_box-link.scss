@@ -1,0 +1,43 @@
+.box-link {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+    padding: var(--offset-m) var(--offset-xls) calc(var(--arrow-btn) + var(--offset-m)) var(--offset-m);
+    min-height: var(--gap);
+    background-color: var(--yellow);
+    color: var(--black);
+    text-align: left;
+    transition: 0.3s all;
+
+    @media (min-width: 768px) {
+        width: var(--gap);
+    }
+
+    @media (max-width: 767px) {
+        padding: var(--offset-s);
+        min-height: var(--section-padding);
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--dark-yellow);
+        }
+    }
+
+    // .box-link__text
+
+    &__text {
+        @extend %text-13;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        @media (max-width: 767px) {
+            max-width: 21.5rem;
+            font-size: 1.1rem;
+            line-height: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,194 @@
+// Custom select
+.select {
+    $this: &;
+
+    position: relative;
+    @extend %text-14;
+    color: var(--black);
+
+    &__title {
+        @extend %vertical-align;
+        @include padding-x(var(--offset-s));
+        gap: var(--offset-s);
+        font-weight: 500;
+        height: var(--input-height);
+        background-color: #fff;
+        border: 0.1rem solid #fff;
+        cursor: pointer;
+        transition: 0.3s background-color, 0.3s border-color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--light-gray);
+                border-color: var(--light-gray);
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 1.8rem;
+            right: var(--offset-s);
+            width: 2rem;
+            height: 2rem;
+            //background-image: url(../images/icons/drop.svg);
+            @extend %bg-contain;
+            transition: transform 0.3s ease-out;
+
+            @media (max-width: 1024px) {
+                top: 1.4rem;
+            }
+        }
+
+        &.active {
+            background-color: #fff;
+            border-color: var(--yellow);
+            border-bottom: none;
+
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    border-color: var(--yellow);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        position: absolute;
+        top: var(--input-height);
+        left: 0;
+        right: 0;
+        border: 0.1rem solid var(--yellow);
+        border-top: none;
+        z-index: 30;
+        background-color: #fff;
+    }
+
+    &__input {
+        display: none;
+
+        &:checked + label {
+            background-color: var(--light-blue);
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        overflow: hidden;
+        display: block;
+        padding: var(--offset-xxs) var(--offset-s);
+        transition: 0.3s background-color;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--light-blue);
+            }
+        }
+    }
+
+    &--size {
+        &_xs {
+            @media (max-width: 1024px) {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+            }
+
+            #{$this} {
+                &__title {
+                    height: var(--arrow-btn);
+
+                    &::after {
+                        top: 1.5rem;
+
+                        @media (max-width: 1024px) {
+                            top: 1.1rem;
+                        }
+                    }
+                }
+
+                &__content {
+                    top: var(--arrow-btn);
+                }
+            }
+        }
+
+        &_xl {
+            #{$this} {
+                &__title {
+                    height: var(--select-height-xl);
+
+                    &:after {
+                        @media (min-width: 1025px) {
+                            top: 2.5rem;
+                        }
+                    }
+                }
+
+                &__content {
+                    top: var(--select-height-xl);
+
+                    @media (max-width: 1024px) {
+                        top: var(--input-height);
+                    }
+                }
+            }
+        }
+    }
+
+    &--style {
+        &_bg {
+            &-light-blue {
+                #{$this} {
+                    &__title {
+                        background-color: var(--light-blue);
+                    }
+                }
+            }
+        }
+    }
+
+    &--with {
+        &_border {
+            #{$this} {
+                &__title {
+                    border: 0.1rem solid var(--black);
+
+                    &.active {
+                        border-color: var(--yellow);
+                    }
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            border-color: var(--light-blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &--touch-border {
+        @media (max-width: 1024px) {
+            #{$this} {
+                &__title {
+                    border: 0.1rem solid var(--black);
+
+                    &.active {
+                        border-color: var(--yellow);
+                    }
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            border-color: var(--light-blue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

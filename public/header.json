@@ -1,0 +1,47 @@
+{
+    "header": {
+        "logo": {
+            "text": "сеть фитнес–клубов"
+        },
+        "menu": {
+            "links": [{
+                "href": "/work",
+                "text": "Работа"
+            }, {
+                "href": "/blog",
+                "text": "Блог"
+            }, {
+                "href": "/contacts",
+                "text": "Контакты"
+            }, {
+                "href": "/sport-food",
+                "text": "Магазин спорт. питания"
+            }, {
+                "href": "/profile",
+                "icon": "Logout",
+                "text": "Личный кабинет"
+            }],
+            "nav": {
+                "items": [{
+                    "href": "/concept",
+                    "text": "Концепция"
+                }, {
+                    "href": "/clubs",
+                    "text": "Клубы"
+                }, {
+                    "href": "/team",
+                    "text": "Команда"
+                }, {
+                    "href": "/courses",
+                    "text": "Курсы"
+                }, {
+                    "href": "/success-stories",
+                    "text": "Истории успеха",
+                    "count": {
+                        "value": "175"
+                    }
+                }]
+            }
+        }
+    }
+}

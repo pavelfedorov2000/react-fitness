@@ -1,0 +1,52 @@
+// COUNTER LIST
+.counter,
+.mark-list {
+    --counter-num: var(--offset-m);
+
+    @include row-grid(var(--offset-m));
+
+    li {
+        position: relative;
+        padding-left: calc(var(--offset-s) + var(--counter-num));
+
+        @media(max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--counter-num);
+            height: var(--counter-num);
+            border-radius: 50%;
+            @extend %grid-center;
+            background-color: var(--black);
+            color: #fff;
+        }
+    }
+}
+
+.counter {
+    counter-reset: num;
+
+    li {
+        &:before {
+            content: counter(num);
+            counter-increment: num;
+        }
+    }
+}
+
+.mark-list {
+    li {
+        &:before {
+            content: '';
+            background-image: url(../images/icons/check-mark.svg);
+            background-size: var(--offset-s);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}

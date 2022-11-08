@@ -1,0 +1,136 @@
+.social {
+    $this: &;
+
+    @extend %grid-row;
+
+    // .social__item
+
+    &__item {
+        width: var(--offset-xls);
+        height: var(--offset-xls);
+        background-color: #fff;
+        border: 0.1rem solid var(--dark);
+        transition: 0.3s background-color, 0.3s border-color;
+
+        svg {
+            width: var(--offset-s);
+            height: var(--offset-s);
+
+            path {
+                transition: 0.3s all;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    path {
+                        fill: #fff;
+                    }
+                }
+
+                #{$this}__num {
+                    color: #fff;
+                }
+            }
+        }
+
+        &--style {
+            &_bg {
+                &-white {
+                    background-color: #fff;
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+
+    &__num {
+        font-size: 1.1rem;
+        line-height: 1;
+        color: var(--dark-gray);
+        transition: 0.3s color;
+    }
+
+    // .social__item--vk
+
+    &__item--vk {
+        svg {
+            width: 1.8rem;
+            height: 1.1rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--vk);
+                border-color: var(--vk);
+            }
+        }
+    }
+
+    // .social__link
+
+    &__link {
+        @extend %grid-center;
+        align-content: center;
+        gap: 0.6rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    // .social__item--youtube
+
+    &__item--youtube {
+        svg {
+            width: 1.9rem;
+            height: 1.3rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--youtube);
+                border-color: var(--youtube);
+            }
+        }
+    }
+
+    // .social__item--fb
+
+    &__item--fb {
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--fb);
+                border-color: var(--fb);
+
+                svg path {
+                    stroke: #fff;
+                }
+            }
+        }
+    }
+
+    // .social__item--inst
+
+    &__item--inst {
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--inst);
+                border-color: var(--inst);
+            }
+        }
+    }
+
+    &--col {
+        grid-auto-flow: row;
+
+        #{$this} {
+            &__item {
+                border-bottom: none;
+
+                &:last-child {
+                    border-bottom: 0.1rem solid var(--dark);
+                }
+            }
+        }
+    }
+}

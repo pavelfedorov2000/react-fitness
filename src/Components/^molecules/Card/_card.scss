@@ -1,0 +1,108 @@
+.card {
+    $this: &;
+
+    position: relative;
+    background-color: var(--light-blue);
+    border: 0.1rem solid var(--light-blue);
+    min-height: 24.8rem;
+    transition: 0.3s all;
+
+    @media (max-width: 767px) {
+        min-height: 18.1rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #fff;
+            border-color: var(--black);
+
+            #{$this} {
+                &__label {
+                    background-color: var(--light-blue);
+                }
+            }
+
+            .arrow-btn {
+                background-color: var(--yellow);
+            }
+        }
+    }
+
+    &__inner {
+        display: block;
+        height: 100%;
+        padding: var(--offset-m) var(--offset-m) 2.8rem;
+
+        @media (max-width: 767px) {
+            padding: var(--offset-s) var(--mob-padding) 2.8rem;
+        }
+    }
+
+    // .card__inner
+
+    &__content {
+        @extend %flex-col;
+        align-items: flex-start;
+        min-height: 100%;
+
+        > * {
+            &:not(:last-child) {
+                margin-bottom: var(--offset-m);
+
+                @media (max-width: 767px) {
+                    margin-bottom: var(--offset-s);
+                }
+            }
+
+            &:last-child {
+                margin-top: auto;
+            }
+        }
+    }
+
+    // .card__title
+
+    &__title {
+        @extend %text-16;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+
+    &__address {
+        @extend %text-14;
+        position: relative;
+        padding-left: 2.8rem;
+        color: var(--dark-gray);
+
+        @media (max-width: 767px) {
+            font-size: 1.3rem;
+            line-height: 1.8rem;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0rem;
+            left: 0rem;
+            width: 2rem;
+            height: 2rem;
+            //background-image: url(../images/icons/ico-pin.svg);
+            @extend %bg-contain;
+        }
+
+        b {
+            display: block;
+            font-weight: 500;
+            color: var(--black);
+        }
+    }
+
+    // .card__text
+
+    &__text {
+        @extend %text-14;
+    }
+}

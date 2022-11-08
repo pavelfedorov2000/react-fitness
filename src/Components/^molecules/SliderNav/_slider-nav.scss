@@ -1,0 +1,110 @@
+.slider-nav {
+    $this: &;
+
+    --proressbar-width: 6.7rem;
+    --proressbar-height: 0.2rem;
+
+    display: grid;
+    gap: var(--offset-s);
+    grid-template-columns: calc(var(--nav) * 2) max-content var(--proressbar-width) max-content;
+    grid-template-areas: 'arrows current bar total';
+    align-items: center;
+    height: var(--nav);
+    padding-right: var(--offset-s);
+    background-color: var(--black);
+    color: #fff;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: calc(var(--nav) * 2) 1fr max-content var(--proressbar-width) max-content;
+        grid-template-areas: 'arrows . current bar total';
+    }
+
+    &__arrows {
+        display: flex;
+        grid-area: arrows;
+    }
+
+    &__arrow {
+        @extend %grid-center;
+        width: var(--nav);
+        height: var(--nav);
+        transition: 0.3s background-color;
+
+        /* &:focus,
+        &:active {
+            background-color: var(--dark-yellow);
+        } */
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: var(--yellow);
+            }
+        }
+    }
+
+    &__progress {
+        position: relative;
+        grid-area: bar;
+        height: var(--proressbar-height);
+        background-color: var(--gray);
+    }
+
+    &__progress-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+
+    &__counter {
+        @extend %text-14;
+        font-weight: 500;
+        line-height: 2.3rem;
+
+        &--current {
+            grid-area: current;
+        }
+
+        &--total {
+            grid-area: total;
+        }
+    }
+
+    &--style {
+        &_bg {
+            &-white {
+                background-color: #fff;
+                color: var(--black);
+
+                #{$this} {
+                    &__arrow {
+                        svg path {
+                            fill: var(--black);
+                        }
+                    }
+
+                    &__progress-bar {
+                        background-color: var(--black);
+                    }
+                }
+            }
+        }
+    }
+
+    &--brs {
+        border-radius: $brs;
+
+        #{$this} {
+            &__arrow {
+                &--prev {
+                    border-radius: $brs 0 0 $brs;
+                }
+
+                &--next {
+                    border-radius: 0 $brs $brs 0;
+                }
+            }
+        }
+    }
+}

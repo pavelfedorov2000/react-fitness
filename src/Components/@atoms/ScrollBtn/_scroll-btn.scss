@@ -1,0 +1,60 @@
+@keyframes scroll-btn {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: translateY(-0.5rem);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: translateY(-1rem);
+    }
+}
+
+.scroll-btn {
+    $this: &;
+
+    display: none;
+    place-items: center;
+    align-content: center;
+    background-color: var(--black);
+
+    &__arrow {
+        width: var(--offset-m);
+        height: var(--offset-m);
+        fill: #fff;
+        animation-name: scroll-btn;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+
+        &:nth-child(2) {
+            animation-delay: .25s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: .5s;
+        }
+    }
+
+    @media (min-width: 1025px) {
+        display: grid;
+        width: var(--gap);
+        height: var(--gap);
+        grid-area: scroll;
+        // .scroll-btn__arrow
+    }
+
+    &--yellow {
+        background-color: var(--yellow);
+
+        #{$this} {
+            &__arrow {
+                fill: var(--black);
+            }
+        }
+    }
+}

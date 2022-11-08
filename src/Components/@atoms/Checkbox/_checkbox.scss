@@ -1,0 +1,34 @@
+// ===================== CHECKBOXES ==================== //
+.check {
+    $this: &;
+
+    &__input {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+
+        &:checked {
+            & + #{$this}__style {
+                &:before {
+                    content: '';
+                    width: 8px;
+                    height: 8px;
+                    //background-color: $accent;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+
+    &__style {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        //border: 2px solid ;
+    }
+}
