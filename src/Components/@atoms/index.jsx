@@ -1,7 +1,10 @@
 export { default as Button } from './Button/Button';
+export { default as Suptitle } from './Suptitle/Suptitle';
 export { default as Title } from './Title/Title';
 export { default as Tab } from './Tab/Tab';
+export { default as List } from './List/List';
 export { default as Count } from './Count/Count';
+export { default as Phone } from './Phone/Phone';
 //export { default as Badge } from './Badge/Badge';
 //export { default as Count } from './Count/Count';
 export { default as Img } from './Img/Img';
@@ -22,6 +25,7 @@ export { default as Checkbox } from './Checkbox/Checkbox';
 //export { default as Radio } from './Radio/Radio';
 export { default as BurgerBtn } from './BurgerBtn/BurgerBtn';
 export { default as PlayerBtn } from './PlayerBtn/PlayerBtn';
+export { default as FormAgree } from './FormAgree/FormAgree';
 //export { default as Progress } from './Progress/Progress';
 //export { default as Price } from './Status/Status';
 //export { default as Price } from './Price/Price';

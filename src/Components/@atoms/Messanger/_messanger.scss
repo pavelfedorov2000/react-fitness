@@ -1,0 +1,27 @@
+.messanger {
+    @extend %grid-center;
+    // .messanger__icon
+
+    &__icon {
+        fill: var(--black);
+        width: var(--offset-m);
+        height: var(--offset-m);
+
+        @media (max-width: 767px) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        path {
+            transition: 0.3s fill;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                path {
+                    fill: var(--dark-yellow);
+                }
+            }
+        }
+    }
+}

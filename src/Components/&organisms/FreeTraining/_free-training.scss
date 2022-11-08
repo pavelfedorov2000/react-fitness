@@ -1,0 +1,173 @@
+.free-training {
+    --pb: 10.7rem;
+    --img: 34.8rem;
+    --img-offset: 2.7rem;
+    --title: 51.2rem;
+    --title-offset-top: 2rem;
+    --text: 38.4rem;
+    --text-pb: 7.3rem;
+    --text-line-w: 23.2rem;
+    --text-line-h: 0.2rem;
+    --list: 27.2rem;
+    --video-width: 67.2rem;
+    --video-height: 37.9rem;
+    --bg-width: 65.2rem;
+    --decor-width: 47.5rem;
+    --decor-height: 35.4rem;
+    --decor-top-offset: 1rem;
+    --decor-left-offset: 0.5rem;
+    // .unique-concept__inner
+
+    position: relative;
+    background-position: 100% 18.2rem;
+    background-size: var(--bg-width) 100%;
+    background-repeat: no-repeat;
+
+    @media (max-width: 1024px) {
+        background-size: 0 0;
+        padding: var(--offset-m) 0 var(--offset-l);
+    }
+
+    @media (min-width: 1025px) {
+
+        //background-position: right bottom;
+        //background-size: var(--bg-width) 88rem;
+        //background-repeat: no-repeat;
+        &:before {
+            @include rect(top, left, 18.7rem, 0, 38.9rem, var(--beige));
+        }
+    }
+
+    // .free-training__content
+
+    &__content {
+        display: grid;
+
+        @media (max-width: 1024px) {
+            row-gap: var(--offset-l);
+        }
+
+        @media (max-width: 767px) {
+            row-gap: var(--offset-m);
+        }
+
+        @media (min-width: 1025px) {
+            grid-template-rows:
+                var(--section-padding) var(--title-offset-top) max-content var(--offset-xl) max-content 6.6rem 10.2rem - 6.6rem minmax(var(--video-height),
+                    max-content) var(--pb);
+            grid-template-columns:
+                var(--list) 7.7rem var(--offset-xls) calc(var(--title) - var(--text)) 1fr calc(var(--img) - var(--img-offset)) var(--img-offset) 6rem;
+            grid-template-areas:
+                '. . . . . . . .'
+                '. . . . . img img .'
+                'title title title title . img img .'
+                '. . . . . img img .'
+                'text text text . . img img .'
+                '. . . . . img img .'
+                'list . . . . img img .'
+                'list . video video video video video video';
+        }
+
+        > * {
+            @media (max-width: 1024px) {
+                width: calc(100vw - var(--mob-padding));
+                padding-right: var(--mob-padding);
+            }
+        }
+    }
+
+    // .free-training__title
+
+    &__title {
+        @media (min-width: 1025px) {
+            grid-area: title;
+        }
+    }
+
+    // .free-training__text
+
+    &__text {
+        @media (min-width: 1025px) {
+            position: relative;
+            grid-area: text;
+            padding-bottom: var(--text-pb);
+
+            &::before {
+                content: '';
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: var(--text-line-w);
+                height: var(--text-line-h);
+                background-color: var(--yellow);
+            }
+        }
+
+        &:not(:last-child) {
+            @media (max-width: 767px) {
+                margin-bottom: var(--offset-xxs);
+            }
+        }
+    }
+
+    // .free-training__img
+
+    &__img {
+        display: none;
+
+        @media (min-width: 1025px) {
+            display: block;
+            grid-area: img;
+        }
+    }
+
+    // .free-training__list-wrap
+
+    &__list-wrap {
+        @media (min-width: 1025px) {
+            grid-area: list;
+        }
+    }
+
+    // .free-training__list-title
+
+    &__list-title {
+        @extend %text-18;
+        font-weight: 700;
+        margin-bottom: var(--offset-xls);
+
+        @media (max-width: 1024px) {
+            margin-bottom: var(--offset-l);
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: var(--offset-s);
+        }
+    }
+
+    &__video {
+        @media (min-width: 1025px) {
+            grid-area: video;
+        }
+    }
+
+    &__video-decor {
+        display: none;
+
+        @media(min-width: 1025px) {
+            display: block;
+            position: absolute;
+            left: var(--decor-left-offset);
+            top: calc((var(--decor-height) - var(--decor-top-offset)) * (-1));
+            width: var(--decor-width);
+            height: var(--decor-height);
+        }
+    }
+
+    &__video-body {
+        @media (max-width: 1024px) {
+            width: 100vw;
+            margin-left: calc(var(--mob-padding) * (-1));
+        }
+    }
+}

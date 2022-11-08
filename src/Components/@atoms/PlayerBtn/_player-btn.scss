@@ -1,4 +1,6 @@
 .player-btn {
+    --play: var(--offset-xxl);
+
     @extend %grid-center;
     width: var(--play);
     height: var(--play);

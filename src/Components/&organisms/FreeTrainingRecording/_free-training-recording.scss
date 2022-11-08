@@ -1,0 +1,48 @@
+.free-training-recording {
+    box-sizing: border-box;
+    border: var(--offset-m) solid var(--yellow);
+    @include padding-y(10.4rem);
+
+    @media (max-width: 1024px) {
+        @include padding-y(4rem);
+        border-width: var(--mob-padding);
+    }
+
+    @media (min-width: 1025px) {
+        //background-image: url(../images/elements/free-training-elements.svg);
+        background-size: 164.6rem 42.9rem;
+        background-position: 50% 12.5rem;
+        background-repeat: no-repeat;
+    }
+
+    /* @media (max-width: 1024px) {
+        padding: var(--offset-xls) calc(var(--offset-l) - var(--offset-xs));
+    } */
+
+    &__container {
+        @media (max-width: 1024px) {
+            grid-template-columns: unset;
+            @include padding-x(calc(var(--offset-l) - var(--mob-padding)));
+        }
+    }
+
+    // .free-training-recording__title
+
+    &__title {
+        max-width: 71.5rem;
+        margin-bottom: var(--offset-xxxl);
+
+        @media (max-width: 1024px) {
+            margin-bottom: var(--offset-l);
+        }
+    }
+
+    &__form {
+        @media (min-width: 768px) {
+            grid-template-columns: 32rem 15rem 1fr;
+            grid-template-areas:
+                'name tel tel'
+                'select select btn';
+        }
+    }
+}

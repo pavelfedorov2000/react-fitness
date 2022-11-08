@@ -1,11 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
-function DoubleMarquee({modifier}) {
+function DoubleMarquee({ modifier }) {
     return (
-        <div class={classNames('double-marquee', modifier && `double-marquee--${modifier}`)}>
+        <div className={classNames('double-marquee', modifier && `double-marquee--${modifier}`)}>
             {Array(2).fill(0).map((_, i) => (
-                <div class={classNames('double-marquee__line', {
+                <div className={classNames('double-marquee__line', {
                     'double-marquee__line--top': i === 0,
                     'double-marquee__line--bottom': i === 1,
                 })}>

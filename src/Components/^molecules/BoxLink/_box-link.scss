@@ -1,4 +1,6 @@
 .box-link {
+    $this: &;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -38,6 +40,30 @@
             max-width: 21.5rem;
             font-size: 1.1rem;
             line-height: 1.6rem;
+        }
+    }
+
+    &__player {
+        position: absolute;
+        right: var(--offset-xxs);
+        bottom: var(--offset-xxs);
+    }
+
+    &--type {
+        &_video {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 19.2rem;
+            min-height: 11.5rem;
+
+            #{$this} {
+                &__text {
+                    font-size: 1.2rem;
+                    line-height: 1.8rem;
+                    font-weight: 700;
+                }
+            }
         }
     }
 }

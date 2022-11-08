@@ -8,19 +8,6 @@
     }
 }
 
-.suptitle {
-    @extend %text-17;
-
-    @media(max-width: 767px) {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-    }
-
-    &--black {
-        color: var(--black);
-    }
-}
-
 .section-title {
     @extend .title;
     @extend %text-38;
@@ -45,16 +32,6 @@
             margin-left: var(--offset-m);
             @include border-text(var(--black), transparent);
         }
-    }
-}
-
-.section-suptitle {
-    @extend %text-17;
-    color: var(--dark-gray);
-
-    @media (max-width: 767px) {
-        font-size: 1.2rem;
-        line-height: 1.7rem;
     }
 }
 

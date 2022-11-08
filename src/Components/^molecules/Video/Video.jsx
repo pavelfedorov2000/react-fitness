@@ -1,21 +1,25 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Img, PlayerBtn } from '../../@atoms';
+import BoxLink from '../BoxLink/BoxLink';
 
-function Video({ className, video }) {
+function Video({ className, img, href, info, box, videoDecor, infoColor }) {
     return (
-        <figure className={classNames('video', className)}>
-            <div className="video__body unique-concept__video-body">
+        <figure className={classNames('video', className && `${className}__video`)}>
+            {videoDecor && <Img className={`${className}__video-decor`} src={videoDecor} width="475" height="354" />}
+            <div className={classNames('video__body', className && `${className}__video-body`)}>
                 <div className="video__bg">
-                    <Img src={video.img.src} width="632" height="382" />
+                    <Img src={img.src} width="632" height="382" />
                 </div>
-                <PlayerBtn className="video__player" />
-                <a className="full-link" href={video.href}
+                {box ? <BoxLink videoBox={box} text={box.text} type="video" /> : <PlayerBtn className="video__player" />}
+                <a className="full-link" href={href ? href : '#'}
                     target="_blank" aria-label="Смотреть видео"></a>
             </div>
-            {video.info &&
-                <figcaption className="video__info">
-                    {video.info.items.map(item => (
+            {info &&
+                <figcaption className={classNames('video__info', {
+                    'video__info--white': infoColor === 'white'
+                })}>
+                    {info.items.map(item => (
                         <span key={item.text.toString()}>{item.text}</span>
                     ))}
                 </figcaption>

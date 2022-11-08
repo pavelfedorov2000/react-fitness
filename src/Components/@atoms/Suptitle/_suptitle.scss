@@ -1,0 +1,12 @@
+.suptitle {
+    @extend %text-17;
+
+    @media(max-width: 767px) {
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+    }
+
+    &--black {
+        color: var(--black);
+    }
+}

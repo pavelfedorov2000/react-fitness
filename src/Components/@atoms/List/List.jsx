@@ -1,13 +1,14 @@
+import classNames from 'classnames';
 import React from 'react';
 
-function List({items, count}) {
-    const list = items.map(li => <li>{li}</li>);
+function List({items, count, gap}) {
+    const list = items.map(li => <li key={li.text.toString()}>{li.text}</li>);
 
     return (
         count === true ?
-            <ol className="list">{list}</ol>
+            <ol className={classNames('list counter', gap && `list--gap_${gap}`)}>{list}</ol>
             :
-            <ul className="list">{list}</ul>
+            <ul className={classNames('list', gap && `list--gap_${gap}`)}>{list}</ul>
     );
 }
 

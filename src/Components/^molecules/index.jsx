@@ -1,10 +1,17 @@
 export { default as Tabs } from './Tabs/Tabs';
 export { default as Btns } from './Btns/Btns';
 export { default as Social } from './Social/Social';
+export { default as Apps } from './Apps/Apps';
+export { default as Leader } from './Leader/Leader';
 export { default as Accordion } from './Accordion/Accordion';
 export { default as Slider } from './Slider/Slider';
 export { default as SliderNav } from './SliderNav/SliderNav';
+export { default as TextBlock } from './TextBlock/TextBlock';
+export { default as SectionTop } from './SectionTop/SectionTop';
 
+export { default as DoubleMarquee } from './DoubleMarquee/DoubleMarquee';
+
+export { default as AsideClient } from './AsideClient/AsideClient';
 export { default as AsideClients } from './AsideClients/AsideClients';
 
 export { default as SaleArticle } from './SaleArticle/SaleArticle';

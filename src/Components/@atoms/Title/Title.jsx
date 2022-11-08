@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-function Title({ level, text, sectionTitle, className }) {
+function Title({ level, text, sectionTitle, className, border, stroke }) {
     const textArr = text.split(' ');
     const spanOpen = textArr.filter(el => el.includes('<span>'));
     const spanOpenIndex = textArr.indexOf(spanOpen[0]);
@@ -27,26 +27,34 @@ function Title({ level, text, sectionTitle, className }) {
             return '';
         }
 
-        return ` ${el}`;
+        return ` ${el} `;
     });
 
-    function generateTitle(level, text, sectionTitle, className) {
+    function generateTitle(level, text, sectionTitle, className, border, stroke) {
         switch (level) {
             case '1':
                 return <h1 className={classNames('title', className && className, {
-                    'section-title': sectionTitle
+                    'section-title': sectionTitle,
+                    'section-title--border': sectionTitle && border,
+                    'section-title--stroke': sectionTitle && stroke
                 })}>{formattedText}</h1>
             case '2':
                 return <h2 className={classNames('title', className && className, {
-                    'section-title': sectionTitle
+                    'section-title': sectionTitle,
+                    'section-title--border': sectionTitle && border,
+                    'section-title--stroke': sectionTitle && stroke
                 })}>{formattedText}</h2>
             case '3':
                 return <h3 className={classNames('title', className && className, {
-                    'section-title': sectionTitle
+                    'section-title': sectionTitle,
+                    'section-title--border': sectionTitle && border,
+                    'section-title--stroke': sectionTitle && stroke
                 })}>{formattedText}</h3>
             case '4':
                 return <h4 className={classNames('title', className && className, {
-                    'section-title': sectionTitle
+                    'section-title': sectionTitle,
+                    'section-title--border': sectionTitle && border,
+                    'section-title--stroke': sectionTitle && stroke
                 })}>{formattedText}</h4>
         }
     }

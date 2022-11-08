@@ -43,10 +43,26 @@
     li {
         &:before {
             content: '';
-            background-image: url(../images/icons/check-mark.svg);
+            //background-image: url(../images/icons/check-mark.svg);
             background-size: var(--offset-s);
             background-position: center;
             background-repeat: no-repeat;
+        }
+    }
+}
+
+.list {
+    &--gap {
+        &_xl {
+            row-gap: var(--offset-xl);
+
+            @media (max-width: 1024px) {
+                row-gap: var(--offset-m);
+            }
+
+            @media (max-width: 767px) {
+                row-gap: var(--offset-s);
+            }
         }
     }
 }
