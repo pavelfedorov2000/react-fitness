@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-function TextBlock({className, items }) {
+function TextBlock({ className, items }) {
     return (
         <div className={classNames('section-text', className)}>
             {items.map(p => (

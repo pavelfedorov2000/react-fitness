@@ -3,7 +3,7 @@ import React from 'react';
 function Messanger({ messanger }) {
     return (
         <a className="messanger" href="#">
-            <messanger.name />
+            <messanger.svg />
         </a>
     );
 }

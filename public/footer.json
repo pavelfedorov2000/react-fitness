@@ -1,0 +1,111 @@
+{
+    "footer": {
+        "menu": {
+            "cols": [{
+                "title": {
+                    "text": "Компания"
+                },
+                "list": {
+                    "items": [{
+                        "href": "/concept",
+                        "text": "Уникальная концепция"
+                    }, {
+                        "href": "/team",
+                        "text": "Команда"
+                    }, {
+                        "href": "/success-stories",
+                        "text": "Истории успеха"
+                    }, {
+                        "href": "/contacts",
+                        "text": "Контакты"
+                    }]
+                }
+            }, {
+                "title": {
+                    "text": "Клубы"
+                },
+                "list": {
+                    "row": true,
+                    "type": "clubs",
+                    "items": [{
+                        "text": "Звенигород"
+                    }, {
+                        "text": "Электросталь"
+                    }, {
+                        "text": "Краснознаменск"
+                    }, {
+                        "text": "Владимир"
+                    }, {
+                        "text": "Голицыно"
+                    }, {
+                        "text": "Орехово-Зуев"
+                    }, {
+                        "text": "Можайск"
+                    }, {
+                        "text": "Клин"
+                    }, {
+                        "text": "Солнечногорск"
+                    }]
+                }
+            }, {
+                "title": {
+                    "text": "Клиентам"
+                },
+                "list": {
+                    "items": [{
+                        "href": "#",
+                        "text": "Личный кабинет"
+                    }, {
+                        "href": "#",
+                        "text": "Магазин спорт. питания"
+                    }, {
+                        "href": "#",
+                        "text": "Курсы"
+                    }, {
+                        "href": "#",
+                        "text": "Полезные материалы"
+                    }, {
+                        "href": "/blog",
+                        "text": "Новости"
+                    }, {
+                        "href": "#",
+                        "text": "Мероприятия"
+                    }]
+                }
+            }]
+        },
+        "contacts": {
+            "items": [{
+                "phone": "+7 495 946-76-00"
+            }, {
+                "email": "info@fitness-on.ru"
+            }]
+        },
+        "copyright": {
+            "items": [{
+                "text": "© Fitness–On 2020"
+            }, {
+                "text": "Все права защищены"
+            }]
+        },
+        "politics": {
+            "href": "#",
+            "text": "Политика конфиденциальности"
+        },
+        "developer": {
+            "items": [{
+                "key": "Дизайн",
+                "value": {
+                    "href": "#",
+                    "text": "Urbik"
+                }
+            }, {
+                "key": "Разработка",
+                "value": {
+                    "href": "#",
+                    "text": "Fitnesson"
+                }
+            }]
+        }
+    }
+}

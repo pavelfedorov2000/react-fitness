@@ -1,5 +1,5 @@
 import React from 'react';
-import { Events, FreeTraining, MobileApp, Promo, Sale, UniqueConcept } from '../Components/&organisms';
+import { Events, Footer, FreeTraining, FreeTrainingRecording, MobileApp, Promo, Sale, UniqueConcept } from '../Components/&organisms';
 import { DoubleMarquee } from '../Components/^molecules';
 //import { useSelector, useDispatch } from 'react-redux';
 
@@ -25,6 +25,7 @@ function Home() {
             <MobileApp />
             <Events />
             <FreeTraining />
+            <FreeTrainingRecording />
             <DoubleMarquee modifier="with_border" />
         </main>
     );
