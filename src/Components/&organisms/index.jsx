@@ -10,6 +10,7 @@ export { default as Promo } from './Promo/Promo';
 export { default as Sale } from './Sale/Sale';
 export { default as UniqueConcept } from './UniqueConcept/UniqueConcept';
 export { default as MobileApp } from './MobileApp/MobileApp';
+export { default as BlogSection } from './BlogSection/BlogSection';
 export { default as Events } from './Events/Events';
 export { default as EventBlock } from './EventBlock/EventBlock';
 export { default as FreeTraining } from './FreeTraining/FreeTraining';

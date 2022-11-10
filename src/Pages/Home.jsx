@@ -1,5 +1,5 @@
 import React from 'react';
-import { Events, Footer, FreeTraining, FreeTrainingRecording, MobileApp, Promo, Sale, UniqueConcept } from '../Components/&organisms';
+import { BlogSection, Events, Footer, FreeTraining, FreeTrainingRecording, MobileApp, Promo, Sale, UniqueConcept } from '../Components/&organisms';
 import { DoubleMarquee } from '../Components/^molecules';
 //import { useSelector, useDispatch } from 'react-redux';
 
@@ -23,6 +23,7 @@ function Home() {
             <UniqueConcept />
             <DoubleMarquee />
             <MobileApp />
+            <BlogSection />
             <Events />
             <FreeTraining />
             <FreeTrainingRecording />

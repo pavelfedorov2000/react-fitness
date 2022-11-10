@@ -15,6 +15,7 @@ export { default as AsideClient } from './AsideClient/AsideClient';
 export { default as AsideClients } from './AsideClients/AsideClients';
 
 export { default as SaleArticle } from './SaleArticle/SaleArticle';
+export { default as ArticleCard } from './ArticleCard/ArticleCard';
 
 export { default as BoxLink } from './BoxLink/BoxLink';
 
