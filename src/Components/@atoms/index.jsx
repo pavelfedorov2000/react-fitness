@@ -2,6 +2,7 @@ export { default as Button } from './Button/Button';
 export { default as Suptitle } from './Suptitle/Suptitle';
 export { default as Title } from './Title/Title';
 export { default as Tab } from './Tab/Tab';
+export { default as Badge } from './Badge/Badge';
 export { default as List } from './List/List';
 export { default as Count } from './Count/Count';
 export { default as Phone } from './Phone/Phone';

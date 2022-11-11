@@ -1,11 +1,9 @@
-import filters from './filters';
-import products from './products';
+import blog from './blog';
 import { combineReducers } from 'redux';
 
 
 const rootReducer = combineReducers({
-    filters,
-    products,
+    blog,
 });
 
 export default rootReducer;

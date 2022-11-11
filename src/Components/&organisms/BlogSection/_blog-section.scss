@@ -70,6 +70,7 @@
 
     &__slider {
         @media (min-width: 1025px) {
+            display: none;
             grid-area: slider;
             visibility: visible;
         }
@@ -86,6 +87,15 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: var(--offset-xls);
+        }
+    }
+
+    &__items {
+        @media(min-width: 1025px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--offset-xls);
+            grid-area: slider;
         }
     }
 

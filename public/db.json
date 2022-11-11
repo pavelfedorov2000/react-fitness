@@ -21,17 +21,17 @@
     "blog": {
         "items": [{
             "id": 0,
-            "date": {
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/qgXtqv2/01.jpg"
             },  
             "category": {
                 "text": "Тренировки"
             },
             "title": {
-                "text": "Советы по домашним тренировкам от&nbsp;тренера&nbsp; FITNESSON"
+                "text": "Советы по домашним тренировкам от тренера FITNESSON"
             },
             "views": {
                 "count": {
@@ -40,17 +40,22 @@
             }
         }, {
             "id": 1,
-            "date": {
+            "sale": true,
+            "bg": "yellow",
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/V21K6zc/02.jpg"
             },  
             "category": {
-                "text": ""
+                "text": "Акции"
             },
             "title": {
-                "text": ""
+                "text": "Осенние скидки"
+            },
+            "discount": {
+                "text": "от 17% до 33%"
             },
             "views": {
                 "count": {
@@ -59,17 +64,18 @@
             }
         }, {
             "id": 2,
-            "date": {
+            "bg": "ocean",
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/9tjGHXq/03.png"
             },  
             "category": {
-                "text": ""
+                "text": "История успеха"
             },
             "title": {
-                "text": ""
+                "text": "Баланова Елена"
             },
             "views": {
                 "count": {
@@ -78,17 +84,18 @@
             }
         }, {
             "id": 3,
-            "date": {
+            "bg": "ocean",
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/rbs8RfZ/04.png"
             },  
             "category": {
-                "text": ""
+                "text": "Тренировки"
             },
             "title": {
-                "text": ""
+                "text": "Как определить оптимальную программу тренировок?"
             },
             "views": {
                 "count": {
@@ -97,11 +104,12 @@
             }
         }, {
             "id": 4,
-            "date": {
+            "bg": "ocean",
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/ggVXBWJ/06.png"
             },  
             "category": {
                 "text": "История успеха"
@@ -118,17 +126,21 @@
         }, {
             "id": 5,
             "sale": true,
-            "date": {
+            "bg": "yellow",
+            "datetime": {
                 "text": "08.09.2020"
             },
             "img": {
-                "src": ""
+                "src": "https://i.ibb.co/tBJw2Zt/07.png"
             },  
             "category": {
                 "text": "Акции"
             },
             "title": {
-                "text": "<span>Безумные</span><span>зимние скидки до 50%</span>"
+                "text": "Безумные"
+            },
+            "discount": {
+                "text": "зимние скидки до 50%"
             },
             "views": {
                 "count": {

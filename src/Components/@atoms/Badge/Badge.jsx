@@ -1,8 +1,9 @@
+import classNames from 'classnames';
 import React from 'react';
 
-function Badge({text}) {
+function Badge({className, text, bg }) {
     return (
-        <span className="badge">{text}</span>
+        <span className={classNames('badge', className, bg && `badge--style_bg-${bg}`)}>{text}</span>
     );
 }
 
