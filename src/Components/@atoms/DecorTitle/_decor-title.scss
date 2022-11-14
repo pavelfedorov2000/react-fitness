@@ -1,0 +1,31 @@
+.decor-title {
+    @extend %flex-center;
+    @extend .title;
+    @extend %text-48;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    background-color: var(--yellow);
+    color: #fff;
+    display: none;
+
+    @media(min-width: 1025px) {
+        display: flex;
+    }
+
+    &--style {
+        &_bg {
+            &-ocean {
+                background-color: var(--ocean);
+            }
+
+            &-gray {
+                background-color: #fff;
+                color: var(--dark-gray);
+
+                span {
+                    color: var(--yellow);
+                }
+            }
+        }
+    }
+}

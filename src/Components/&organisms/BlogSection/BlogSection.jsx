@@ -37,7 +37,7 @@ function BlogSection() {
                     <SectionTop className="blog-section__top" {...blogSection} />
 
                     <div className="blog-section__grid">
-                        <Button className="blog-section__link-btn" {...blogSection.linkBtn} />
+                        <Button className="blog-section__link-btn" border {...blogSection.linkBtn} />
                         <div className="blog-section__items">
                             {isLoaded ?
                                 blogSliderItems.map(article => (
@@ -54,7 +54,7 @@ function BlogSection() {
                                 : Array(blogSuccessItems.length).fill(0).map((_, index) => <Loader key={index} />)
                             }
                         </div>
-                        <Button className="blog-section__more" {...blogSection.btn} />
+                        <Button className="blog-section__more" bg="black" {...blogSection.btn} />
                     </div>
                 </div>
             </div>

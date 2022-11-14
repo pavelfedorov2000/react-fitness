@@ -9,15 +9,17 @@ function EventBlock({className, img, title, textBlock, leader, btn}) {
             <div className="event-block__img">
                 <Img src={img.src} width="556" height="528" />
             </div>
+            
             <div className="event-block__content">
                 <div className="event-block__content-inner">
-                    {title && <Title className="event-block__title" level="3" text={title.text} />}
-                    {textBlock && <TextBlock className="event-block__text" items={textBlock.items} />}
-                    {leader && <Leader className="event-block__list" items={leader.items} />}
-                    {btn && <Button className="event-block__btn" text={btn.text} />}
+                    {title && <Title className="event-block__title" level="3" {...title} />}
+                    {textBlock && <TextBlock className="event-block__text" {...textBlock} />}
+                    {leader && <Leader className="event-block__list" {...leader} />}
+                    {btn && <Button className="event-block__btn" {...btn} />}
                 </div>
             </div>
-            {btn && <Button className="event-block__btn" text={btn.text} />}
+
+            {btn && <Button className="event-block__btn" {...btn} />}
         </article>
     );
 }

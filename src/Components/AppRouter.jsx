@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import { Home, Blog, BlogDetail } from '../Pages';
 import { RouterContext } from '../context';
+import Faq from '../Pages/Faq';
 
 function AppRouter() {
     const routes = React.useMemo(() => [{
@@ -27,8 +28,13 @@ function AppRouter() {
         id: 2,
         path: "/blog/:id",
         component: BlogDetail,
-        exact: true
-    }], [Home, Blog, BlogDetail]);
+        exact: true,
+    }, {
+        id: 3,
+        path: "/faq",
+        component: Faq,
+        exact: true,
+    }], [Home, Blog, BlogDetail, Faq]);
 
     return (
         <RouterContext.Provider value={{

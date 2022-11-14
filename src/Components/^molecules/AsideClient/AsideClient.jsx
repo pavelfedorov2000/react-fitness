@@ -4,9 +4,11 @@ import { Img } from '../../@atoms';
 import maleClient from '../../../assets/img/aside-clients/man.jpg';
 import femaleClient from '../../../assets/img/aside-clients/woman.jpg';
 
-function AsideClient({className, direction,  gender, name }) {
+function AsideClient({className, reverse, position, gender, name, src }) {
     return (
-        <aside className={classNames('aside-client', className, direction && `aside-client--${direction}`)}>
+        <aside className={classNames('aside-client', className, position && `aside-client--position_${position}`, {
+            'aside-client--reverse': reverse
+        })}>
             <figure className="aside-client__body">
                 {name &&
                     <figcaption className="aside-client__descr">
@@ -15,7 +17,7 @@ function AsideClient({className, direction,  gender, name }) {
                     </figcaption>
                 }
                 <div className="aside-client__img">
-                    <Img src={gender === 'male' ? maleClient : femaleClient} alt="фото" width="200" height="480" />
+                    <Img src={src ? src : (gender === 'male' ? maleClient : femaleClient)} alt="фото" width="200" height="480" />
                 </div>
             </figure>
         </aside>

@@ -457,8 +457,7 @@
         },
         "asideClient": {
             "gender": "male",
-            "name": "Дмитрий Борисов",
-            "direction": "reverse"
+            "name": "Дмитрий Борисов"
         }
     },
     "mobile_app": {
@@ -660,6 +659,124 @@
                 "text": "Отправить"
             },
             "agree": true
+        }
+    },
+    "faq": {
+        "promo": {
+            "decorTitle": {
+                "bg": "yellow",
+                "text": "Q&A"
+            },
+            "title": {
+                "text": "Ответы на вопросы"
+            },
+            "searchInput": {
+                "placeholder": "Поиск вопроса"
+            }
+        },
+        "asideClient": {
+            "gender": "female",
+            "name": "Екатерина Гарибальди.",
+            "position": "left"
+        },
+        "content": {
+            "items": [{
+                "id": 1,
+                "title": {
+                    "text": "Первая тренировка"
+                },
+                "accordion": {
+                    "items": [{
+                        "id": 11,
+                        "toggle": {
+                            "text": "Что взять на первую тренировку?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 12,
+                        "toggle": {
+                            "text": "Сколько раз и в какие дни я могу посещать клуб?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 13,
+                        "toggle": {
+                            "text": "Можно ли в клубе купить cпортивное питание?"
+                        },
+                        "content": {
+                            "text": "В каждом клубе FITNESSON вы можете приобрести спортивное питание. В продаже есть протеин, витамины, спортивные добавки, проотеиновые батончики. Тренер поможет вам подобрать нужное."
+                        }
+                    }]
+                }
+            }, {
+                "id": 2,
+                "title": {
+                    "text": "Безопасность и здоровье"
+                },
+                "accordion": {
+                    "items": [{
+                        "id": 21,
+                        "toggle": {
+                            "text": "Правила посещения клуба во время пандемии"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 22,
+                        "toggle": {
+                            "text": "Обработка помещений"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 23,
+                        "toggle": {
+                            "text": "У меня больная спина, можно ли мне заниматься?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }]
+                }
+            }, {
+                "id": 3,
+                "title": {
+                    "text": "Мобильное приложение"
+                },
+                "accordion": {
+                    "items": [{
+                        "id": 31,
+                        "toggle": {
+                            "text": "Зачем нужно приложение FITNESSON?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 32,
+                        "toggle": {
+                            "text": "Как создать аккаунт в приложении?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }, {
+                        "id": 33,
+                        "toggle": {
+                            "text": "На какие устройства можно установить приложение?"
+                        },
+                        "content": {
+                            "text": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, cum quaerat. Culpa dignissimos distinctio nam ab cum consequatur, sequi animi aliquid eius ratione. Ipsa provident distinctio, eaque sit perspiciatis debitis."
+                        }
+                    }]
+                }
+            }]
         }
     }
 }

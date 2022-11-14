@@ -8,7 +8,7 @@ function FormBlock({ className, formClassName, text, form }) {
     
     return (
         <div className={classNames('form-block', className)}>
-            {text && <TextBlock className="form-block__text" items={text.items} />}
+            {text && <TextBlock className="form-block__text" {...text} />}
 
             <Form className="form-block__form free-training-recording__form" formClassName={formClassName} {...form} />
 

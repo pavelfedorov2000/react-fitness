@@ -7,7 +7,7 @@ function App() {
         <div className="wrapper">
             <Header />
             <BurgerMenu />
-            <AppRouter/>
+            <AppRouter />
             <Footer />
         </div>
     );

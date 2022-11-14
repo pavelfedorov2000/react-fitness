@@ -1,6 +1,7 @@
 export { default as Button } from './Button/Button';
 export { default as Suptitle } from './Suptitle/Suptitle';
 export { default as Title } from './Title/Title';
+export { default as DecorTitle } from './DecorTitle/DecorTitle';
 export { default as Tab } from './Tab/Tab';
 export { default as Badge } from './Badge/Badge';
 export { default as List } from './List/List';

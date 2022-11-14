@@ -34,5 +34,8 @@ export { default as Pagination } from './Pagination/Pagination';
 
 export { default as Messangers } from './Messangers/Messangers';
 
+export { default as FaqList } from './FaqList/FaqList';
+export { default as FaqItem } from './FaqItem/FaqItem';
+
 //export { default as Map } from './Map';
 //export { default as Prices } from './Prices';

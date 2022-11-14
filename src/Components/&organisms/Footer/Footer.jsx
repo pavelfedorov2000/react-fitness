@@ -36,8 +36,8 @@ function Footer() {
 
                     {footerData.contacts &&
                         <address className="footer__contacts">
-                            {footerData.contacts.items.map(item => (
-                                <Contact {...item} />
+                            {footerData.contacts.items.map((item, index) => (
+                                <Contact key={index} {...item} />
                             ))}
                         </address>
                     }

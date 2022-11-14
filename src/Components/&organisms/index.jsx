@@ -15,3 +15,6 @@ export { default as Events } from './Events/Events';
 export { default as EventBlock } from './EventBlock/EventBlock';
 export { default as FreeTraining } from './FreeTraining/FreeTraining';
 export { default as FreeTrainingRecording } from './FreeTrainingRecording/FreeTrainingRecording';
+
+export { default as PromoFaq } from './PromoFaq/PromoFaq';
+export { default as FaqSection } from './FaqSection/FaqSection';

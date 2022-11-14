@@ -18,12 +18,12 @@ function UniqueConcept() {
     return (
         uniqueConcept && <section className="unique-concept">
             <div className="container unique-concept__inner">
-                <AsideClient className="unique-concept__aside-client" {...uniqueConcept.asideClient} />
+                <AsideClient className="unique-concept__aside-client" {...uniqueConcept.asideClient} reverse />
                 <div className="section-body unique-concept__body">
-                    <Title className="unique-concept__title" level="2" text={uniqueConcept.title.text} sectionTitle />
-                    <TextBlock className="unique-concept__text" items={uniqueConcept.textBlock.items} />
+                    <Title className="unique-concept__title" level="2" {...uniqueConcept.title} sectionTitle />
+                    <TextBlock className="unique-concept__text" {...uniqueConcept.textBlock} />
                     <div className="unique-concept__img">
-                        <Img src={uniqueConcept.img.src} width="480" height="631" />
+                        <Img {...uniqueConcept.img} width="480" height="631" />
                         <CircleText className="unique-concept__circle-text" />
                     </div>
                     <Video className="unique-concept" {...uniqueConcept.video} />
